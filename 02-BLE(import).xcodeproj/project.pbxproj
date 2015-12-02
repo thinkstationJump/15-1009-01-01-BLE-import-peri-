@@ -15,6 +15,8 @@
 		70414ECB1BC61E8A009FF8F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70414EC91BC61E8A009FF8F0 /* LaunchScreen.storyboard */; };
 		70414ED61BC61E8A009FF8F0 /* _2_BLE_import_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70414ED51BC61E8A009FF8F0 /* _2_BLE_import_Tests.m */; };
 		70414EE11BC61E8A009FF8F0 /* _2_BLE_import_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70414EE01BC61E8A009FF8F0 /* _2_BLE_import_UITests.m */; };
+		70414EF01BC61F90009FF8F0 /* XMGCenterBLEVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70414EEF1BC61F90009FF8F0 /* XMGCenterBLEVC.m */; settings = {ASSET_TAGS = (); }; };
+		70414EF31BC61FBD009FF8F0 /* XMGPeripheralBLEVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 70414EF21BC61FBD009FF8F0 /* XMGPeripheralBLEVC.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		70414EDC1BC61E8A009FF8F0 /* 02-BLE(import)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "02-BLE(import)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70414EE01BC61E8A009FF8F0 /* _2_BLE_import_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _2_BLE_import_UITests.m; sourceTree = "<group>"; };
 		70414EE21BC61E8A009FF8F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70414EEE1BC61F90009FF8F0 /* XMGCenterBLEVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGCenterBLEVC.h; sourceTree = "<group>"; };
+		70414EEF1BC61F90009FF8F0 /* XMGCenterBLEVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGCenterBLEVC.m; sourceTree = "<group>"; };
+		70414EF11BC61FBD009FF8F0 /* XMGPeripheralBLEVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPeripheralBLEVC.h; sourceTree = "<group>"; };
+		70414EF21BC61FBD009FF8F0 /* XMGPeripheralBLEVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPeripheralBLEVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				70414EBF1BC61E8A009FF8F0 /* AppDelegate.m */,
 				70414EC11BC61E8A009FF8F0 /* ViewController.h */,
 				70414EC21BC61E8A009FF8F0 /* ViewController.m */,
+				70414EEE1BC61F90009FF8F0 /* XMGCenterBLEVC.h */,
+				70414EEF1BC61F90009FF8F0 /* XMGCenterBLEVC.m */,
+				70414EF11BC61FBD009FF8F0 /* XMGPeripheralBLEVC.h */,
+				70414EF21BC61FBD009FF8F0 /* XMGPeripheralBLEVC.m */,
 				70414EC41BC61E8A009FF8F0 /* Main.storyboard */,
 				70414EC71BC61E8A009FF8F0 /* Assets.xcassets */,
 				70414EC91BC61E8A009FF8F0 /* LaunchScreen.storyboard */,
@@ -202,6 +212,7 @@
 		70414EB01BC61E8A009FF8F0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XMG;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "小码哥";
 				TargetAttributes = {
@@ -270,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70414EF01BC61F90009FF8F0 /* XMGCenterBLEVC.m in Sources */,
 				70414EC31BC61E8A009FF8F0 /* ViewController.m in Sources */,
 				70414EC01BC61E8A009FF8F0 /* AppDelegate.m in Sources */,
 				70414EBD1BC61E8A009FF8F0 /* main.m in Sources */,
+				70414EF31BC61FBD009FF8F0 /* XMGPeripheralBLEVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "02-BLE(import)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-2-BLE-import-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "02-BLE(import)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.520it.-2-BLE-import-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +511,7 @@
 				70414EE71BC61E8A009FF8F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70414EE81BC61E8A009FF8F0 /* Build configuration list for PBXNativeTarget "02-BLE(import)Tests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +520,7 @@
 				70414EEA1BC61E8A009FF8F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70414EEB1BC61E8A009FF8F0 /* Build configuration list for PBXNativeTarget "02-BLE(import)UITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +529,7 @@
 				70414EED1BC61E8A009FF8F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

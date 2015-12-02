@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "XMGCenterBLEVC.h"
+#import "XMGPeripheralBLEVC.h"
 
 @interface ViewController ()
 
@@ -22,6 +24,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)centerBLE:(id)sender {
+    [self.navigationController pushViewController:[[XMGCenterBLEVC alloc] init] animated:YES];
+}
+- (IBAction)peripheralBLE:(id)sender {
+    [self.navigationController pushViewController:[[XMGPeripheralBLEVC alloc] init] animated:YES];
 }
 
 @end

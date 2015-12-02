@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cmZ-DO-UY5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SCJ-qW-GAL">
+            <objects>
+                <navigationController id="cmZ-DO-UY5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZR9-0d-RBv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SRm-g9-gJR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aD-ca-Kdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227" y="57"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYd-aH-yb0">
+                                <rect key="frame" x="40" y="164" width="520" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aeO-ez-SnF"/>
+                                </constraints>
+                                <state key="normal" title="中心管理设模式"/>
+                                <connections>
+                                    <action selector="centerBLE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARs-0N-ROh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDZ-kt-iPc">
+                                <rect key="frame" x="40" y="288" width="520" height="64"/>
+                                <color key="backgroundColor" red="0.3411764706" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="外设管理设计模式"/>
+                                <connections>
+                                    <action selector="peripheralBLE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RiC-4C-YFi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zYd-aH-yb0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="0Qv-94-lcs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zYd-aH-yb0" secondAttribute="trailing" constant="20" id="3wg-T9-sRA"/>
+                            <constraint firstItem="zYd-aH-yb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8XN-dJ-9T0"/>
+                            <constraint firstItem="GDZ-kt-iPc" firstAttribute="leading" secondItem="zYd-aH-yb0" secondAttribute="leading" id="nj0-r8-pGb"/>
+                            <constraint firstItem="GDZ-kt-iPc" firstAttribute="trailing" secondItem="zYd-aH-yb0" secondAttribute="trailing" id="sWB-XQ-mpU"/>
+                            <constraint firstItem="GDZ-kt-iPc" firstAttribute="height" secondItem="zYd-aH-yb0" secondAttribute="height" id="tKY-Bb-a9b"/>
+                            <constraint firstItem="GDZ-kt-iPc" firstAttribute="top" secondItem="zYd-aH-yb0" secondAttribute="bottom" constant="60" id="tLf-UF-QmB"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VXG-yo-EL8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="418"/>
         </scene>
     </scenes>
 </document>
